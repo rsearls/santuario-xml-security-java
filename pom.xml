@@ -224,7 +224,7 @@
             <plugin>
                 <groupId>org.jvnet.jaxb2.maven2</groupId>
                 <artifactId>maven-jaxb2-plugin</artifactId>
-                <version>0.14.0</version>
+                <version>0.14.1-SNAPSHOT</version>
                 <dependencies>
                     <dependency>
                         <groupId>org.glassfish.jaxb</groupId>
@@ -529,13 +529,18 @@
                  <dependency>
                      <groupId>jakarta.xml.bind</groupId>
                      <artifactId>jakarta.xml.bind-api</artifactId>
-                     <version>2.3.3</version>
+                     <version>${jakarta.xml.bind-api.version}</version>
                  </dependency>
                  <dependency>
                      <groupId>org.glassfish.jaxb</groupId>
                      <artifactId>jaxb-runtime</artifactId>
                      <version>2.3.3</version>
                      <scope>test</scope>
+                 </dependency>
+                 <dependency>
+                     <groupId>com.sun.xml.bind</groupId>
+                     <artifactId>jaxb-impl</artifactId>
+                     <version>3.0.2</version>
                  </dependency>
              </dependencies>
          </profile>
@@ -562,6 +567,7 @@
         <!-- Allow Clirr severity to be overriden by the command-line option -DminSeverity=level -->
         <minSeverity>info</minSeverity>
         <project.build.outputTimestamp>1</project.build.outputTimestamp>
+        <jakarta.xml.bind-api.version>3.0.1</jakarta.xml.bind-api.version>
     </properties>
     
     <dependencies>
